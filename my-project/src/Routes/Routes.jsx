@@ -1,12 +1,21 @@
 import {createBrowserRouter} from "react-router";
+import MainLayout from "../Layout/MainLayout";
 
-// const { createBrowserRouter } = require("react-router-dom");
 
 
 const router=createBrowserRouter([
     {
         path:'/',
-        element:<h2>This is main layout</h2>
+        element:<MainLayout></MainLayout>,
+        
+    },
+    {
+        path:'/auth',
+        element:<h2>This is auth layout</h2>
+    },
+    {
+        path:'*',
+        element:<h2>This is error page</h2>
     }
 ]);
 
