@@ -5,12 +5,12 @@ import { Outlet } from 'react-router-dom';
 
 const MainLayout = () => {
     return (
-        <div>
+        <div className='bg-[#f5f9fd] '>
             <Header></Header>
             <Navbar></Navbar>
 
             <Outlet></Outlet>
-            
+
         </div>
     );
 };
