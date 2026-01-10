@@ -6,7 +6,7 @@ const WhatWeDoCard = ({singleData,Icon}) => {
 
 
     return (
-        <div className="md:w-[200px] md:h-[250px] rounded-xl text-center shadow-lg bg-white p-3">
+        <div className="md:w-[250px] md:h-[250px] rounded-xl text-center shadow-lg bg-white p-3">
             
             {/* ICON */}
             {Icon && <Icon className="bg-emerald-500 text-white text-4xl mx-auto mb-4 w-16 h-16 p-2 rounded-full" />}
