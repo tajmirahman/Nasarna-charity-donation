@@ -1,9 +1,9 @@
 import { FaPlay } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import bannerImag from '../assets/Image/banner.png'
 
 const Navbar = () => {
     return (
-        <div className="md:w-8/12 mx-auto mt-0.5">
+        <div className="md:w-10/12 mx-auto mt-0.5">
             <section className="bg-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
 
@@ -37,12 +37,12 @@ const Navbar = () => {
                     {/* RIGHT IMAGE */}
                     <div className="relative flex justify-center lg:justify-end">
                         {/* Blob background */}
-                        <div className="absolute -z-10 w-[420px] h-[420px] bg-emerald-100 rounded-[60%_40%_55%_45%]"></div>
+                        <div className="absolute -z-10 w-[520px] h-[520px] bg-emerald-100 rounded-[60%_40%_55%_45%]"></div>
 
                         {/* Image */}
-                        <div className="w-[380px] h-[380px] rounded-[60%_40%_55%_45%] border-8 border-emerald-200 overflow-hidden">
+                        <div className="w-[480px] h-[480px] rounded-[60%_40%_55%_45%] border-8 border-emerald-200 overflow-hidden">
                             <img
-                                src="https://images.unsplash.com/photo-1509099836639-18ba1795216d"
+                                src={bannerImag}
                                 alt="Children Help"
                                 className="w-full h-full object-cover"
                             />
