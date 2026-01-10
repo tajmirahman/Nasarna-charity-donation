@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Clean Water",
+        "description": "Lorem ipsum dolor amet consectetur adipiscing sed do eiusmod.",
+        "icon": "FaHandHoldingWater"
+    },
+    {
+        "id": 2,
+        "title": "Healthy Food",
+        "description": "Lorem ipsum dolor amet consectetur adipiscing sed do eiusmod.",
+        "icon": "FaBowlFood"
+    },
+    {
+        "id": 3,
+        "title": "Pure Education",
+        "description": "Lorem ipsum dolor amet consectetur adipiscing sed do eiusmod.",
+        "icon": "FaGraduationCap"
+    },
+    {
+        "id": 4,
+        "title": "Medical Facilities",
+        "description": "Lorem ipsum dolor amet consectetur adipiscing sed do eiusmod.",
+        "icon": "FaHeartPulse"
+    }
+]

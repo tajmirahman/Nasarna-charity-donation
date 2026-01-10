@@ -1,11 +1,15 @@
 import { FaPlay } from "react-icons/fa";
 import bannerImag from '../assets/Image/banner.png'
+import { useState } from "react";
 
 const Navbar = () => {
+
+    const [open, setOpen]=useState(false)
+
     return (
         <div className="md:w-10/12 mx-auto mt-0.5">
             <section className="bg-white overflow-hidden">
-                <div className="max-w-7xl mx-auto px-4 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
+                <div className="max-w-7xl mx-auto px-4 py-4  grid lg:grid-cols-2 gap-10 items-center">
 
                     {/* LEFT CONTENT */}
                     <div>
@@ -25,7 +29,7 @@ const Navbar = () => {
                                 Donate Now
                             </button>
 
-                            <button className="flex items-center gap-3 text-gray-700 font-medium hover:text-emerald-500">
+                            <button onClick={()=>setOpen(true)} className="flex items-center gap-3 text-gray-700 font-medium hover:text-emerald-500">
                                 <span className="w-10 h-10 rounded-full border border-emerald-500 flex items-center justify-center text-emerald-500">
                                     <FaPlay className="text-sm ml-[2px]" />
                                 </span>
@@ -51,6 +55,38 @@ const Navbar = () => {
 
                 </div>
             </section>
+
+
+            {/* VIDEO MODAL */}
+            {open && (
+                <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center">
+                    <div className="relative bg-black rounded-xl w-[90%] max-w-3xl">
+
+                        {/* Close Button */}
+                        <button
+                            onClick={() => setOpen(false)}
+                            className="absolute -top-10 right-0 text-white text-3xl"
+                        >
+                            ✕
+                        </button>
+
+                        {/* Video */}
+                        <div className="aspect-video">
+                            <iframe
+                                className="w-full h-full rounded-xl"
+                                src="https://www.youtube.com/embed/ysz5S6PUM-U?autoplay=1"
+                                title="Charity Video"
+                                allow="autoplay; encrypted-media"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            )}
+
+
+
         </div>
     );
 };
