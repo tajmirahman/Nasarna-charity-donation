@@ -1,0 +1,34 @@
+ [
+  {
+    "id": 1,
+    "title": "Ensure Education for every poor children",
+    "image": "/images/education.jpg",
+    "raised": 7000,
+    "goal": 8000,
+    "percentage": 65.5
+  },
+  {
+    "id": 2,
+    "title": "Provide Food for Hungry Children",
+    "image": "/images/food.jpg",
+    "raised": 4500,
+    "goal": 6000,
+    "percentage": 75
+  },
+  {
+    "id": 3,
+    "title": "Medical Support for Poor Families",
+    "image": "/images/medical.jpg",
+    "raised": 3200,
+    "goal": 5000,
+    "percentage": 64
+  },
+  {
+    "id": 4,
+    "title": "Shelter for Homeless Kids",
+    "image": "/images/shelter.jpg",
+    "raised": 5100,
+    "goal": 7000,
+    "percentage": 72.8
+  }
+]

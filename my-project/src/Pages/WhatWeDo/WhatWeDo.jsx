@@ -41,7 +41,7 @@ const WhatWeDo = () => {
                 </div>
             </div>
 
-            <div className='bg-white mt-20'>
+            <div className='bg-white mt-20 min-h-screen'>
                 <div className="md:w-10/12 mx-auto">
                     <section className=" overflow-hidden">
                         <div className="max-w-7xl mx-auto px-4 py-4  grid lg:grid-cols-2 gap-10 items-center">
