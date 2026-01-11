@@ -30,10 +30,10 @@ const OurCauses = () => {
                 </div>
             </nav>
 
-            <div>
-                <h2>Popular Causes What You Should Know
+            <div className='w-9/12 mx-auto'>
+                <h2 className='text-2xl md:text-4xl text-center p-2 my-10'>Popular Causes What You Should Know
                 </h2>
-                <div className='grid grid-cols-1 md:grid-cols-3'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-3 mb-10'>
                     {
                         data.map(causes => <CausesCard causes={causes}></CausesCard>)
                     }
