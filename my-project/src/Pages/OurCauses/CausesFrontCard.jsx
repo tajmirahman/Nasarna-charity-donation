@@ -1,7 +1,9 @@
-import React from 'react';
+
 
 const CausesFrontCard = ({ item }) => {
-    console.log(item)
+
+
+
     return (
         <div>
             <div className="card shadow-md">
