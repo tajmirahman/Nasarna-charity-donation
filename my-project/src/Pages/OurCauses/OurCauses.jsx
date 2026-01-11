@@ -33,9 +33,11 @@ const OurCauses = () => {
             <div>
                 <h2>Popular Causes What You Should Know
                 </h2>
-                {
-                    data.map(causes =><CausesCard causes={causes}></CausesCard>)
-                }
+                <div className='grid grid-cols-1 md:grid-cols-3'>
+                    {
+                        data.map(causes => <CausesCard causes={causes}></CausesCard>)
+                    }
+                </div>
             </div>
         </div>
     );
