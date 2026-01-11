@@ -1,16 +1,19 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useLocation } from 'react-router-dom';
 import Header from '../../Components/Header';
+import CausesCard from './CausesCard';
 
 const OurCauses = () => {
     const data = useLoaderData();
+    const location = useLocation();
+
     console.log(data)
 
     return (
         <div>
             <Header></Header>
             <nav
-                className='flex justify-center items-center *:border h-[200px]'
+                className='flex justify-center items-center h-[200px]'
                 style={{
                     backgroundImage:
                         "url(https://i.ibb.co.com/DHdjhyKp/img-3-6d6b3c93.png)",
@@ -20,9 +23,20 @@ const OurCauses = () => {
                 }}>
                 <div className='text-white text-center '>
                     <h1 className='text-4xl font-bold mb-3'>Our Causes</h1>
-                    <Link to={'/'}><span>Home</span></Link> / <span>causes</span>
+                    <Link to={'/'}><span className='font-semibold text-xl'>Home</span></Link> {'>'}
+                    <span className='font-semibold text-xl'
+                        style={{ color: location.pathname === '/our-causes' ? '#08cc7f' : 'white' }}
+                    >causes</span>
                 </div>
             </nav>
+
+            <div>
+                <h2>Popular Causes What You Should Know
+                </h2>
+                {
+                    data.map(causes =><CausesCard causes={causes}></CausesCard>)
+                }
+            </div>
         </div>
     );
 };
