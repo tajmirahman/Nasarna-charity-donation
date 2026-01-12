@@ -8,7 +8,7 @@ import whatWePic from '../../assets/Image/whatWeDo.png'
 const WhatWeDo = () => {
     const data = useLoaderData();
     const [open, setOpen] = useState(false)
-    console.log(data)
+    // console.log(data)
 
     const iconMap = {
         FaHandHoldingWater: FaHandHoldingWater,

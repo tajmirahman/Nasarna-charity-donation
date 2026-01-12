@@ -32,7 +32,7 @@ const CausesFrontPage = () => {
 
 
     useEffect(() => {
-        fetch('OurCauses.json')
+        fetch('/OurCauses.json')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])

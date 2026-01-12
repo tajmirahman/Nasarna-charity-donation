@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const WhatWeDoCard = ({singleData,Icon}) => {
-    console.log(singleData.icon, Icon);
+    // console.log(singleData.icon, Icon);
 
 
     return (
