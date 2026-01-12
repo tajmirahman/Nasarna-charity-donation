@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "image":"https://i.ibb.co.com/VWMCGWzT/team-1-8ecf1e74.jpg",
+        "desination":"CEO & Founder",
+        "name":"Smith TomKin"
+    },
+    {
+        "id":2,
+        "image":"https://i.ibb.co.com/1GJ0PzQt/team-2-ae3a73a0.jpg",
+        "desination":"Volunteer",
+        "name":"Robert Honey"
+    },
+    {
+        "id":3,
+        "image":"https://i.ibb.co.com/k6M068X0/team-3-0e5f2dce.jpg",
+        "desination":"Volunteer",
+        "name":"Juliya Jessi"
+    }
+]
