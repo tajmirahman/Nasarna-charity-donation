@@ -14,19 +14,22 @@ const Volunteer = () => {
 
 
     return (
-        <div>
-            <p className='bg-[#21c8cb] text-center'>Meet Our Team</p>
-            <h2 className='text-3xl text-center'>Our Expert Volunteer</h2>
-            <div className='grid grid-cols-1 md:grid-cols-3'>
+        <div className='w-9/12 mx-auto my-10'>
+            <p className='text-[#21c8cb] text-center'>Meet Our Team</p>
+            <h2 className='text-3xl text-center mb-5'>Our Expert Volunteer</h2>
+
+
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
                 {
                     data?.map(volunteer => (
-                        <div>
-                            <figure>
+                        <div className='relative'>
+                            <figure >
                                 <img src={volunteer.image} alt="" />
                             </figure>
-                            <div>
-                                <h2 className='text-2xl font-semibold mt-2'>{volunteer.name}</h2>
-                                <p className='text-xl mt-2'>{volunteer.desination}</p>
+
+                            <div className='absolute top-[200px] right-3 p-2 shadow-lg border-4 bg-white'>
+                                <h2 className='text-2xl font-semibold mt-2 text-center'>{volunteer.name}</h2>
+                                <p className='text-xl my-2 text-center'>{volunteer.desination}</p>
                                 <div className='flex justify-center items-center gap-3'>
                                     <FaGooglePlusG />
                                     <FaFacebookF />
