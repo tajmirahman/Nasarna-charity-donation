@@ -12,16 +12,24 @@ const CausesDetails = () => {
             {
                 data.map(singleCauses => (
                     <div>
-                        <h1>{singleCauses.title}</h1>
+                        {/* <h1>{singleCauses.title}</h1> */}
                         <div>
                             {
                                 singleCauses.description?.map((desc, index) => {
-                                    return(
+                                    return (
+                                        <>
                                         <div key={index}>
-                                        <h2 className="text-xl font-semibold text-gray-800">
-                                            {desc["1stHeading"]}
-                                        </h2>
-                                    </div>
+                                            <h2 className="text-xl font-semibold text-gray-800">
+                                                {desc["1stHeading"]}
+                                            </h2>
+                                        </div>
+                                        <div>
+                                            <p>
+                                            {desc["details"]}
+                                            </p>
+                                            <h2>{desc["keyPoin.1stKey"]}</h2>
+                                        </div>
+                                        </>
                                     )
                                 })
                             }
