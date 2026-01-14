@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CausesCard = ({ causes }) => {
-    console.log(causes)
+    // console.log(causes)
     return (
         <div>
 
@@ -26,7 +27,7 @@ const CausesCard = ({ causes }) => {
                     </span>
                 </div>
                 <div className='flex p-2 gap-2'>
-                    <button className='btn flex-1' >Learn more</button>
+                    <Link to={'/causes-details'} className='btn flex-1' >Learn more</Link>
                     <button className='btn flex-1 bg-[#21c8cb] text-white'>Donate Now</button>
                 </div>
             </div>

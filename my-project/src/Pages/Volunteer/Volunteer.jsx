@@ -27,7 +27,7 @@ const Volunteer = () => {
                                 <img src={volunteer.image} alt="" />
                             </figure>
 
-                            <div className='absolute top-[200px] right-3 p-2 shadow-lg border-4 bg-white'>
+                            <div className='absolute top-[200px] right-3 p-4 shadow-lg border-4 bg-white hover:bg-[#21c8cb] hover:text-white'>
                                 <h2 className='text-2xl font-semibold mt-2 text-center'>{volunteer.name}</h2>
                                 <p className='text-xl my-2 text-center'>{volunteer.desination}</p>
                                 <div className='flex justify-center items-center gap-3'>

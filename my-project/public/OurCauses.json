@@ -13,7 +13,16 @@
     "image": "https://i.ibb.co.com/DHdjhyKp/img-3-6d6b3c93.png",
     "raised": 4500,
     "goal": 6000,
-    "percentage": 75
+    "percentage": 75,
+    "description":[
+      {
+        "1stHeading":"lsdkjfhsdkjfhsdkjfhskdjfhskdjfhskdjfh",
+        "details":"skjdfhsdjkfhsdjkfhsdjkfhsdjkfhskdjfhskdjfhsdkjfhskdjfhiweuryhwieufhskjdfhsdkjfhsdkfjhsdkfjhskdfhiseurhfeurfhskdjfhskdjfhsk",
+        "2ndHeading":"sdjkfshdjkghjkghdjfhskdjfskjdhf",
+        "2ndDetails":"sdkjghjkdfhsjkfhsfsjkfhsdjkfhsdjkfgskjfdfhsdjkfhskjdfhskdjfhskjdfhskjdfhsk"
+      }
+
+    ]
   },
   {
     "id": 3,

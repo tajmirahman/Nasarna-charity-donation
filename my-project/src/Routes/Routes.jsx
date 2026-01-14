@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import MainLayout from "../Layout/MainLayout";
 import WhatWeDo from "../Pages/WhatWeDo/WhatWeDo";
 import OurCauses from "../Pages/OurCauses/OurCauses";
+import CausesDetails from "../Pages/OurCauses/CausesDetails";
 
 
 
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
     {
         path: '/our-causes',
         element: <OurCauses></OurCauses>,
+        loader: () => fetch('/OurCauses.json')
+    },
+    {
+        path:'/causes-details',
+        element:<CausesDetails></CausesDetails>,
         loader: () => fetch('/OurCauses.json')
     },
     {
