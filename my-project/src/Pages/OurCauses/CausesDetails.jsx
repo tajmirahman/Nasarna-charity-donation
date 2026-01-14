@@ -1,44 +1,89 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLoaderData, useLocation, useParams } from 'react-router-dom';
+import Header from '../../Components/Header';
+import CausesDetailsCard from './CausesDetailsCard';
 
 const CausesDetails = () => {
     const data = useLoaderData();
-    console.log(data);
+    const {id}=useParams();
+    // console.log(data,id);
+    const [details,setDetails]=useState([]);
+
+    useEffect(()=>{
+        const dataFind=data.find(d=> d.id == id);
+        setDetails(dataFind)
+    },[data, id])
 
 
 
     return (
+        <>
+
+        <div>
+
+            <Header></Header>
+            <nav
+                className='flex justify-center items-center h-[200px]'
+                style={{
+                    backgroundImage:
+                        "url(https://i.ibb.co.com/DHdjhyKp/img-3-6d6b3c93.png)",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                }}>
+                <div className='text-white text-center '>
+                    <h1 className='text-4xl font-bold mb-3'>Our Causes</h1>
+                    <Link to={'/'}><span className='font-semibold text-xl'>Home</span></Link> {'>'}
+                    <span className='font-semibold text-xl'
+                        style={{ color: location.pathname === '/causes-details' ? '#08cc7f' : 'white' }}
+                    >causes</span>
+                </div>
+            </nav>
+
+            <div>
+                {
+                    details?.map(details=><CausesDetailsCard key={details.id}
+                    causes={details}
+                    ></CausesDetailsCard>)
+                }
+            </div>
+        </div>
+
+
+
         <div>
             {
-                data.map(singleCauses => (
-                    <div>
-                        {/* <h1>{singleCauses.title}</h1> */}
-                        <div>
-                            {
-                                singleCauses.description?.map((desc, index) => {
-                                    return (
-                                        <>
-                                            <div key={index}>
-                                                <h2 className="text-xl font-semibold text-gray-800">
-                                                    {desc["1stHeading"]}
-                                                </h2>
-                                            </div>
-                                            <div>
-                                                <p>
-                                                    {desc["details"]}
-                                                </p>
-                                                <h2>{desc.keyPoin?.map((p, i) => <p key={i}>{p}</p>)}</h2>
+                // data.map(singleCauses => (
+                //     <div>
+                //         {/* <h1>{singleCauses.title}</h1> */}
+                //         <div>
+                //             {
+                //                 singleCauses.description?.map((desc, index) => {
+                //                     return (
+                //                         <>
+                //                             <div key={index}>
+                //                                 <h2 className="text-xl font-semibold text-gray-800">
+                //                                     {desc["1stHeading"]}
+                //                                 </h2>
+                //                             </div>
+                //                             <div>
+                //                                 <p>
+                //                                     {desc["details"]}
+                //                                 </p>
+                //                                 <h2>{desc.keyPoin?.map((p, i) => <p key={i}>{p}</p>)}</h2>
 
-                                            </div>
-                                        </>
-                                    )
-                                })
-                            }
-                        </div>
-                    </div>
-                ))
+                //                             </div>
+                //                         </>
+                //                     )
+                //                 })
+                //             }
+                //         </div>
+                //     </div>
+                // ))
             }
         </div>
+
+        </>
     );
 };
 

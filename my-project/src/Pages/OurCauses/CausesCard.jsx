@@ -27,7 +27,7 @@ const CausesCard = ({ causes }) => {
                     </span>
                 </div>
                 <div className='flex p-2 gap-2'>
-                    <Link to={'/causes-details'} className='btn flex-1' >Learn more</Link>
+                    <Link to={`/causes-details/${causes.id}`} className='btn flex-1' >Learn more</Link>
                     <button className='btn flex-1 bg-[#21c8cb] text-white'>Donate Now</button>
                 </div>
             </div>
