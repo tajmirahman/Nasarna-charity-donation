@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import Header from '../../Components/Header';
 import CausesDetailsCard from './CausesDetailsCard';
+import Footer from '../../Components/Footer';
 
 const CausesDetails = () => {
     const data = useLoaderData();
@@ -12,7 +13,10 @@ const CausesDetails = () => {
     useEffect(() => {
         const dataFind = data.filter(d => d.id == id);
         setDetails(dataFind)
-    }, [data, id])
+    }, [data, id]);
+
+
+    const dataSlice=data.slice(1,4);
 
 
 
@@ -40,8 +44,8 @@ const CausesDetails = () => {
                     </div>
                 </nav>
 
-                <div className='grid grid-cols-1 md:grid-cols-12 gap-3 w-9/12 mx-auto mt-10'>
-                    <aside className='md:col-span-9'>
+                <div className='grid grid-cols-1 md:grid-cols-12 gap-3 md:w-10/12 mx-auto mt-10'>
+                    <aside className='md:col-span-8'>
                         <div>
                             {
                                 details?.map(detail => <CausesDetailsCard key={details.id}
@@ -50,11 +54,28 @@ const CausesDetails = () => {
                             }
                         </div>
                     </aside>
-                    <aside className='md:col-span-3'>right side</aside>
+                    <aside className='md:col-span-4 *:border'>
+                        <h2 className='text-3xl text-center'>Recent Post</h2>
+                        <div className='*:border'>
+                            {
+                                dataSlice?.map(recent=>(
+                                    <div key={recent.id} className='flex gap-2 m-2'>
+                                            <img src={recent.image}
+                                            className='w-20 h-20 object-contain' alt="" />
+
+                                        <div>
+                                            <h1 className='font-semibold'>{recent.title}</h1>
+                                            <p className='font-semibold'>{recent.percentage} %</p>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </aside>
                 </div>
             </div>
 
-
+            <Footer></Footer>
 
             <div>
                 {

@@ -3,6 +3,7 @@ import MainLayout from "../Layout/MainLayout";
 import WhatWeDo from "../Pages/WhatWeDo/WhatWeDo";
 import OurCauses from "../Pages/OurCauses/OurCauses";
 import CausesDetails from "../Pages/OurCauses/CausesDetails";
+import Donation from "../Pages/Donation/Donation";
 
 
 
@@ -26,9 +27,15 @@ const router = createBrowserRouter([
         loader: () => fetch('/OurCauses.json')
     },
     {
-        path:'/causes-details/:id',
-        element:<CausesDetails></CausesDetails>,
+        path: '/causes-details/:id',
+        element: <CausesDetails></CausesDetails>,
         loader: () => fetch('/OurCauses.json')
+        // children: [
+        //     {
+        //         path: '/donation',
+        //         element: <Donation></Donation>
+        //     }
+        // ]
     },
     {
         path: '/auth',

@@ -1,15 +1,17 @@
-import React from 'react';
+import { Link } from "react-router-dom";
+
 
 const CausesDetailsCard = ({ causes }) => {
-    console.log(causes);
+    // console.log(causes);
     return (
+        <>
         <div className='md:flex-row'>
             <div className='w-full'>
                 <img className='w-full  object-contain' src={causes.image} alt="" />
             </div>
             <div className='my-5 space-x-5 md:p-3 *:border-4 '>
-                <button className='btn bg-[#21c8cb] rounded-3xl'>Read More</button>
-                <button className='btn bg-[#21c8cb] rounded-3xl'>Donation</button>
+                <Link to={`/causes-details/${causes.id}`} className='btn bg-[#21c8cb] rounded-3xl'>Read More</Link>
+                <Link to={'/donation'} className='btn bg-[#21c8cb] rounded-3xl'>Donation</Link>
                 <button className='btn bg-[#21c8cb] rounded-3xl'>Comments</button>
             </div>
             <div>
@@ -37,6 +39,9 @@ const CausesDetailsCard = ({ causes }) => {
             </div>
 
         </div>
+
+
+        </>
     );
 };
 

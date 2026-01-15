@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLoaderData, useLocation } from 'react-router-dom';
 import Header from '../../Components/Header';
 import CausesCard from './CausesCard';
+import Footer from '../../Components/Footer';
 
 const OurCauses = () => {
     const data = useLoaderData();
@@ -39,6 +40,10 @@ const OurCauses = () => {
                     }
                 </div>
             </div>
+
+            <Footer></Footer>
+
+            
         </div>
     );
 };
