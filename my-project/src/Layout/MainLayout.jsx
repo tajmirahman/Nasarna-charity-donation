@@ -4,6 +4,7 @@ import Navbar from '../Components/Navber';
 import { Outlet } from 'react-router-dom';
 import CausesFrontPage from '../Pages/OurCauses/CausesFrontPage';
 import Volunteer from '../Pages/Volunteer/Volunteer';
+import Footer from '../Components/Footer';
 
 
 
@@ -23,6 +24,9 @@ const MainLayout = () => {
             <section>
                 <Volunteer></Volunteer>
             </section>
+
+            {/* footer section start here */}
+            <Footer></Footer>
 
         </div>
     );

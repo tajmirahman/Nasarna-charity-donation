@@ -26,7 +26,7 @@ const CausesDetailsCard = ({ causes }) => {
                             <div className=''>{
                                 desc.keyPoin?.map((list, i) => (
                                     <div className='flex items-center gap-2'>
-                                        <span className='text-4xl mt-3'>*</span>
+                                        <span className='text-4xl mt-2 text-[#21c8cb]'>*</span>
                                         <p key={i}>{list}</p>
                                     </div>
                                 ))
