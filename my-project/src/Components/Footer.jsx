@@ -11,9 +11,18 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-5 mt-10'>
                 <div>
-                    <img src={logoIcon} className='w-48 text-white' alt="" />
+                    <img src={logoIcon} className='w-48 filter brightness-0 invert' alt="" />
+                </div>
+                <div>
+                    <h2 className='text-white'>Top News</h2>
+                </div>
+                <div>
+                    <h2 className='text-white'>Useful Links</h2>
+                </div>
+                <div>
+                    <h2 className='text-white'>Contact</h2>
                 </div>
             </div>
         </div>
