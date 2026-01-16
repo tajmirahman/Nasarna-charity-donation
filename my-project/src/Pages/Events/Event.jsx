@@ -1,6 +1,7 @@
 
 import { useLoaderData } from 'react-router-dom';
 import EventCard from './EventCard';
+import Footer from '../../Components/Footer';
 
 const Event = () => {
     const data=useLoaderData();
@@ -17,6 +18,9 @@ const Event = () => {
                     data?.map(event=><EventCard key={event.id} event={event}></EventCard>)
                 }
             </div>
+
+                <Footer></Footer>
+
         </div>
     );
 };

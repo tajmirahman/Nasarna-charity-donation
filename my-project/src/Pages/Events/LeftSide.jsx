@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import LearnMore from './LearnMore';
 import Donation from '../Donation/Donation';
 import Contact from './Contact';
@@ -8,12 +8,22 @@ import Contact from './Contact';
 const LeftSide = ({ event }) => {
     const [active, setActive] = useState("");
 
+    // for navlink active buttons 
+    // const activeClass = ({ isActive }) =>
+    //     isActive
+    //         ? "btn bg-primary text-white"
+    //         : "btn";
+
+    // for other buttons active except navlink
+    const btnClass = (name) =>
+        active === name ? "btn bg-primary text-white" : "btn";
+
     const handleLearn = () => {
-        setActive('learn')
+        setActive('learn');
     }
 
-    const handleDonation = () => {
-        setActive('donation')
+    const handleMap = () => {
+        setActive('map');
 
     }
 
@@ -23,16 +33,17 @@ const LeftSide = ({ event }) => {
 
     return (
         <div>
-            <div>
+            <div className='space-y-3 '>
                 <img src={event.image} alt="" />
                 <p>{event.details}</p>
             </div>
 
-            <div>
-                <Link onClick={handleLearn} className='btn'>Learn More</Link>
-                <Link onClick={handleDonation} className='btn'>Map Location</Link>
-                <Link onClick={handleContact} className='btn'>Contact Us</Link>
+            <div className='flex justify-evenly my-5'>
+                <NavLink onClick={handleLearn} className={btnClass('learn')}>Learn More</NavLink>
+                <NavLink onClick={handleMap} className={btnClass('map')}>Map Location</NavLink>
+                <NavLink onClick={handleContact} className={btnClass('contact')}>Contact Us</NavLink>
             </div>
+
 
             <div className=''>
                 {

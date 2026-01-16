@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import Header from '../../Components/Header';
 import EventDetailsCard from './EventDetailsCard';
 import { useEffect, useState } from 'react';
+import Footer from '../../Components/Footer';
 
 const EventDetails = () => {
     const data = useLoaderData();
@@ -32,6 +33,8 @@ const EventDetails = () => {
                     events?.map(singelEvent =><EventDetailsCard key={singelEvent.id} singelEvent={singelEvent}></EventDetailsCard>)
                 }
             </div>
+
+            <Footer></Footer>
 
         </div>
     );
