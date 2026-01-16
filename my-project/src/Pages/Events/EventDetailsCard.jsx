@@ -1,18 +1,16 @@
-import { useOutletContext } from "react-router-dom";
+
 import LeftSide from "./LeftSide";
 
 
-const EventDetailsCard = ({ event }) => {
-      const eventContex=useOutletContext();
+const EventDetailsCard = ({singelEvent}) => {
 
-      if (!eventContex) return <p>Loading...</p>;
 
     return (
         <div>
             <div className='grid grid-cols-1 md:grid-cols-12'>
 
                 <aside className='col-span-8'>
-                    <LeftSide event={event}></LeftSide>
+                    <LeftSide event={singelEvent}></LeftSide>
                 </aside>
 
                 <aside className='col-span-4'> right side</aside>

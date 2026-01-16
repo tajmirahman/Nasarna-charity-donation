@@ -1,17 +1,37 @@
 
+import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
 const LeftSide = ({event}) => {
+    const [learnMore, setLearnMore]=useState(null);
+    const [donation,setDonation]=useState(null);
+
+    const handleLearn=()=>{
+        setLearnMore('yes learn handle')
+    }
+
+    const handleDonation=()=>{
+        setDonation('yes donetion click')
+
+    }
+
     return (
         <div>
-            <img src="" alt="" />
+            <img src={event.image} alt="" />
 
             <div>
-                <Link to={`/learn-more/`} className='btn'>Learn More</Link>
-                <Link to={'/donation'} className='btn'>Donation</Link>
+                <Link onClick={handleLearn}  className='btn'>Learn More</Link>
+                <Link onClick={handleDonation} className='btn'>Donation</Link>
             </div>
 
-            <Outlet></Outlet>
+            <div>
+                {
+                    <h2>{learnMore}</h2>
+                }
+            </div>
+            <div>
+                <h2>{donation}</h2>
+            </div>
 
         </div>
     );

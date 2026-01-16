@@ -7,6 +7,7 @@ import Event from "../Pages/Events/Event";
 import EventDetails from "../Pages/Events/EventDetails";
 import Donation from "../Pages/Donation/Donation";
 import EventDetailsCard from "../Pages/Events/EventDetailsCard";
+import LearnMore from "../Pages/Events/LearnMore";
 
 
 
@@ -45,13 +46,17 @@ const router = createBrowserRouter([
         element:<EventDetails></EventDetails>,
         loader: ()=> fetch ('/Events.json'),
         children:[
+            // {
+            //     index:true,
+            //     element:<EventDetailsCard></EventDetailsCard>
+            // },
             {
-                index:true,
-                element:<EventDetailsCard></EventDetailsCard>
+                path:'/event-details/:id',
+                element:<Donation></Donation>
             },
             {
-                path:'donation',
-                element:<Donation></Donation>
+                path:'/event-details/:id',
+                element:<LearnMore></LearnMore>
             }
         ]
     },
