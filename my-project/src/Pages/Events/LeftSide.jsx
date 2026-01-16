@@ -4,9 +4,10 @@ import { Link, NavLink } from 'react-router-dom';
 import LearnMore from './LearnMore';
 import Donation from '../Donation/Donation';
 import Contact from './Contact';
+import MapLocation from './MapLocation';
 
 const LeftSide = ({ event }) => {
-    const [active, setActive] = useState("");
+    const [active, setActive] = useState("learn");
 
     // for navlink active buttons 
     // const activeClass = ({ isActive }) =>
@@ -17,6 +18,16 @@ const LeftSide = ({ event }) => {
     // for other buttons active except navlink
     const btnClass = (name) =>
         active === name ? "btn bg-primary text-white" : "btn";
+
+    // // for location
+    // event = {
+    //     image: "...",
+    //     details: "...",
+    //     location: {
+    //         lat: 23.8103,
+    //         lng: 90.4125
+    //     }
+    // }
 
     const handleLearn = () => {
         setActive('learn');
@@ -52,8 +63,8 @@ const LeftSide = ({ event }) => {
                 }
             </div>
             <div>
-                {active === 'donation' && (
-                    <Donation></Donation>
+                {active === 'map' && (
+                    <MapLocation location={event.location}></MapLocation>
                 )}
             </div>
 

@@ -111,6 +111,10 @@
         "time": "3.00 - 5.00",
         "city": "Cox's Bazar",
         "details": "These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure.",
+        "location": {
+                    "lat": 23.8103,
+                    "lng": 90.4125
+                   },
         "description": [
             {
                 "heading": "We want to ensure the education for the kids.",
@@ -125,5 +129,4 @@
             }
         ]
     }
-    
 ]

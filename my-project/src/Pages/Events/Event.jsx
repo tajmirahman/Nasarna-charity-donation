@@ -6,6 +6,7 @@ import Footer from '../../Components/Footer';
 const Event = () => {
     const data=useLoaderData();
     // console.log(data)
+    
 
 
 
