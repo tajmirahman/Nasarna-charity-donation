@@ -9,8 +9,6 @@ const EventDetails = () => {
     const { id } = useParams();
     const [events, setEvents] = useState(null);
 
-    // console.log(id);
-    // const event = data.find(e => e.id == id);
 
     useEffect(() => {
         const eventFilter = data.filter(event => event.id == id);
@@ -34,8 +32,6 @@ const EventDetails = () => {
                     events?.map(singelEvent =><EventDetailsCard key={singelEvent.id} singelEvent={singelEvent}></EventDetailsCard>)
                 }
             </div>
-
-            {/* <Outlet></Outlet> */}
 
         </div>
     );

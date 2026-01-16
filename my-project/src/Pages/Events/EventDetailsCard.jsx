@@ -6,7 +6,7 @@ const EventDetailsCard = ({singelEvent}) => {
 
 
     return (
-        <div>
+        <div className="w-10/12 mx-auto mt-5">
             <div className='grid grid-cols-1 md:grid-cols-12'>
 
                 <aside className='col-span-8'>

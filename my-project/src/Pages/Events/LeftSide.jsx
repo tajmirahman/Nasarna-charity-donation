@@ -1,36 +1,55 @@
 
 import { useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import LearnMore from './LearnMore';
+import Donation from '../Donation/Donation';
+import Contact from './Contact';
 
-const LeftSide = ({event}) => {
-    const [learnMore, setLearnMore]=useState(null);
-    const [donation,setDonation]=useState(null);
+const LeftSide = ({ event }) => {
+    const [active, setActive] = useState("");
 
-    const handleLearn=()=>{
-        setLearnMore('yes learn handle')
+    const handleLearn = () => {
+        setActive('learn')
     }
 
-    const handleDonation=()=>{
-        setDonation('yes donetion click')
+    const handleDonation = () => {
+        setActive('donation')
 
+    }
+
+    const handleContact = () => {
+        setActive('contact');
     }
 
     return (
         <div>
-            <img src={event.image} alt="" />
-
             <div>
-                <Link onClick={handleLearn}  className='btn'>Learn More</Link>
-                <Link onClick={handleDonation} className='btn'>Donation</Link>
+                <img src={event.image} alt="" />
+                <p>{event.details}</p>
             </div>
 
             <div>
+                <Link onClick={handleLearn} className='btn'>Learn More</Link>
+                <Link onClick={handleDonation} className='btn'>Map Location</Link>
+                <Link onClick={handleContact} className='btn'>Contact Us</Link>
+            </div>
+
+            <div className=''>
                 {
-                    <h2>{learnMore}</h2>
+                    active === 'learn' && (<LearnMore event={event}></LearnMore>)
+
                 }
             </div>
             <div>
-                <h2>{donation}</h2>
+                {active === 'donation' && (
+                    <Donation></Donation>
+                )}
+            </div>
+
+            <div>
+                {active === 'contact' && (
+                    <Contact></Contact>
+                )}
             </div>
 
         </div>
