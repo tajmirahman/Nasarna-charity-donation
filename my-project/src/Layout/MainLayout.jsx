@@ -6,6 +6,7 @@ import CausesFrontPage from '../Pages/OurCauses/CausesFrontPage';
 import Volunteer from '../Pages/Volunteer/Volunteer';
 import Footer from '../Components/Footer';
 import Event from '../Pages/Events/Event';
+import EventSection from '../Pages/Events/EventSection';
 
 
 
@@ -19,7 +20,7 @@ const MainLayout = () => {
             <Outlet></Outlet>
 
             <section>
-              <CausesFrontPage></CausesFrontPage>
+                <CausesFrontPage></CausesFrontPage>
             </section>
 
             <section>
@@ -27,7 +28,7 @@ const MainLayout = () => {
             </section>
 
             <section>
-                <Event></Event>
+                <EventSection></EventSection>
             </section>
 
             {/* footer section start here */}

@@ -34,8 +34,9 @@ const router = createBrowserRouter([
        
     },
     {
-        path:'/envent',
-        element:<Event></Event>
+        path:'/events',
+        element:<Event></Event>,
+        loader: ()=> fetch ('/Events.json')
     },
     {
         path: '/auth',
