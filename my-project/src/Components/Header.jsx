@@ -9,7 +9,7 @@ const Header = () => {
                 <div className="flex">
                     <ul className="flex justify-center items-center font-semibold gap-3">
                         <Link to={'/'}><a>Home</a></Link>
-                        <Link to={'/'}><a>Event</a></Link>
+                        <Link to={'/events'}><a>Event</a></Link>
                         <Link to={'/'}><a>Blog</a></Link>
                         <Link to={'/our-causes'}><a>Causes</a></Link>
 

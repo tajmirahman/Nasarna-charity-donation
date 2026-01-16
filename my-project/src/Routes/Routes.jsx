@@ -3,8 +3,10 @@ import MainLayout from "../Layout/MainLayout";
 import WhatWeDo from "../Pages/WhatWeDo/WhatWeDo";
 import OurCauses from "../Pages/OurCauses/OurCauses";
 import CausesDetails from "../Pages/OurCauses/CausesDetails";
-import Donation from "../Pages/Donation/Donation";
 import Event from "../Pages/Events/Event";
+import EventDetails from "../Pages/Events/EventDetails";
+import Donation from "../Pages/Donation/Donation";
+import EventDetailsCard from "../Pages/Events/EventDetailsCard";
 
 
 
@@ -37,6 +39,21 @@ const router = createBrowserRouter([
         path:'/events',
         element:<Event></Event>,
         loader: ()=> fetch ('/Events.json')
+    },
+    {
+        path:'/event-details/:id',
+        element:<EventDetails></EventDetails>,
+        loader: ()=> fetch ('/Events.json'),
+        children:[
+            // {
+            //     path:true,
+            //     element:<EventDetailsCard></EventDetailsCard>
+            // },
+            {
+                path:'donation',
+                element:<Donation></Donation>
+            }
+        ]
     },
     {
         path: '/auth',
