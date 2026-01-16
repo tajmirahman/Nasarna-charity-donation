@@ -45,10 +45,10 @@ const router = createBrowserRouter([
         element:<EventDetails></EventDetails>,
         loader: ()=> fetch ('/Events.json'),
         children:[
-            // {
-            //     path:true,
-            //     element:<EventDetailsCard></EventDetailsCard>
-            // },
+            {
+                index:true,
+                element:<EventDetailsCard></EventDetailsCard>
+            },
             {
                 path:'donation',
                 element:<Donation></Donation>

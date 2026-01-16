@@ -5,7 +5,7 @@ import LeftSide from "./LeftSide";
 const EventDetailsCard = ({ event }) => {
       const eventContex=useOutletContext();
 
-      if (!eventContex) return null;
+      if (!eventContex) return <p>Loading...</p>;
 
     return (
         <div>
