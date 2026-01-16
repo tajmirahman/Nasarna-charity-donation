@@ -24,12 +24,14 @@ const MainLayout = () => {
             </section>
 
             <section>
-                <Volunteer></Volunteer>
+                <EventSection></EventSection>
             </section>
 
             <section>
-                <EventSection></EventSection>
+                <Volunteer></Volunteer>
             </section>
+
+            
 
             {/* footer section start here */}
             <Footer></Footer>
