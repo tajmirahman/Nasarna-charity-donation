@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 
 const CausesDetailsCard = ({ causes }) => {
@@ -14,6 +14,11 @@ const CausesDetailsCard = ({ causes }) => {
                 <Link to={'/donation'} className='btn bg-[#21c8cb] rounded-3xl'>Donation</Link>
                 <button className='btn bg-[#21c8cb] rounded-3xl'>Comments</button>
             </div>
+
+
+            {/* <Outlet></Outlet> */}
+
+
             <div>
                 {causes.description?.map((desc, index) => (
                     <div key={index} className=''>

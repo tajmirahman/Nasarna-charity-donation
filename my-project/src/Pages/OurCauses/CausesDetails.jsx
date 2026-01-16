@@ -54,6 +54,8 @@ const CausesDetails = () => {
                             }
                         </div>
                     </aside>
+
+                    
                     <aside className='md:col-span-4 *:border'>
                         <h2 className='text-3xl text-center'>Recent Post</h2>
                         <div className='*:border'>

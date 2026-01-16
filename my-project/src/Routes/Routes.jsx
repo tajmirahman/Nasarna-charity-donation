@@ -4,6 +4,7 @@ import WhatWeDo from "../Pages/WhatWeDo/WhatWeDo";
 import OurCauses from "../Pages/OurCauses/OurCauses";
 import CausesDetails from "../Pages/OurCauses/CausesDetails";
 import Donation from "../Pages/Donation/Donation";
+import Event from "../Pages/Events/Event";
 
 
 
@@ -29,13 +30,12 @@ const router = createBrowserRouter([
     {
         path: '/causes-details/:id',
         element: <CausesDetails></CausesDetails>,
-        loader: () => fetch('/OurCauses.json')
-        // children: [
-        //     {
-        //         path: '/donation',
-        //         element: <Donation></Donation>
-        //     }
-        // ]
+        loader: () => fetch('/OurCauses.json'),
+       
+    },
+    {
+        path:'/envent',
+        element:<Event></Event>
     },
     {
         path: '/auth',
