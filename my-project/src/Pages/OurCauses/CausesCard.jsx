@@ -22,7 +22,7 @@ const CausesCard = ({ causes }) => {
                         <p>Goal: ${causes.goal}</p>
                     </div>
 
-                    <span className="absolute top-[350px] left-60 badge badge-success ">
+                    <span className="absolute top-[380px] left-60 badge badge-success ">
                         {causes.percentage}%
                     </span>
                 </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const MapLocation = ({location}) => {
     return (
-        <div className="w-full h-[350px] rounded-lg overflow-hidden border">
+        <div className="w-full h-[350px] rounded-lg overflow-hidden border mb-3">
             <iframe
                 title="event-map"
                 src={`https://www.google.com/maps?q=${location.lat},${location.lng}&z=15&output=embed`}

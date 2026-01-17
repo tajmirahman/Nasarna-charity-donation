@@ -36,7 +36,7 @@ const LeftSide = ({ event }) => {
     return (
         <div>
             <div className='space-y-3 '>
-                <img src={event.image} alt="" />
+                <img className='w-full mx-auto' src={event.image} alt="" />
                 <p>{event.details}</p>
             </div>
 

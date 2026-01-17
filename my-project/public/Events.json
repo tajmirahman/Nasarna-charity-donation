@@ -2,9 +2,13 @@
     {
         "id": 1,
         "title": "Education for All Children",
-        "image": "https://i.ibb.co.com/LhHZ34vt/event-details-5789b1ce.jpg",
+        "image": "https://i.ibb.co.com/20c8yBQ6/event-1.jpg",
         "time": "3.00 - 5.00",
         "city": "Shylet",
+        "location": {
+                    "lat": 23.8103,
+                    "lng": 90.4125
+                   },
         "details": "These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure.",
         "description": [
             {
@@ -23,9 +27,13 @@
     {
         "id": 2,
         "title": "Food for All Everyone",
-        "image": "https://i.ibb.co.com/LhHZ34vt/event-details-5789b1ce.jpg",
+        "image": "https://i.ibb.co.com/Z6QpzPRH/event-2.jpg",
         "time": "3.00 - 8.00",
         "city": "Dhaka",
+        "location": {
+                    "lat": 23.8103,
+                    "lng": 90.4125
+                   },
         "details": "These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure.",
         "description": [
             {
@@ -44,9 +52,13 @@
     {
         "id": 3,
         "title": "Free Treatment",
-        "image": "https://i.ibb.co.com/LhHZ34vt/event-details-5789b1ce.jpg",
+        "image": "https://i.ibb.co.com/zWZV2nS9/event-3.jpg",
         "time": "3.00 - 5.00",
         "city": "Uttara",
+        "location": {
+                    "lat": 23.8103,
+                    "lng": 90.4125
+                   },
         "details": "These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure.",
         "description": [
             {
@@ -65,9 +77,13 @@
     {
         "id": 4,
         "title": "Education for All Children",
-        "image": "https://i.ibb.co.com/LhHZ34vt/event-details-5789b1ce.jpg",
+        "image": "https://i.ibb.co.com/0jL4VVNr/event-4.jpg",
         "time": "10.00 - 1.00",
         "city": "Borishal",
+        "location": {
+                    "lat": 23.8103,
+                    "lng": 90.4125
+                   },
         "details": "These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure.",
         "description": [
             {
@@ -86,9 +102,13 @@
     {
         "id": 5,
         "title": "Food for All Everyone",
-        "image": "https://i.ibb.co.com/LhHZ34vt/event-details-5789b1ce.jpg",
+        "image": "https://i.ibb.co.com/BVjTkPTc/event-5.jpg",
         "time": "8.00 - 10.00",
         "city": "Khulna",
+        "location": {
+                    "lat": 23.8103,
+                    "lng": 90.4125
+                   },
         "details": "These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure.",
         "description": [
             {
@@ -107,7 +127,7 @@
     {
         "id": 6,
         "title": "Free Treatment",
-        "image": "https://i.ibb.co.com/LhHZ34vt/event-details-5789b1ce.jpg",
+        "image": "https://i.ibb.co.com/SD0FJ4ms/event-6.jpg",
         "time": "3.00 - 5.00",
         "city": "Cox's Bazar",
         "details": "These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure.",
