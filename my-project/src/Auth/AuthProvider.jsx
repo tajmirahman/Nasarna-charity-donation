@@ -16,23 +16,24 @@ const AuthProvider = ({ children }) => {
 
         const storedComments = localStorage.getItem('comments');
 
-        if(storedComments){
+        if (storedComments) {
             setComments(JSON.parse(storedComments));
         }
 
     }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
 
         localStorage.setItem('comments', JSON.stringify(comment));
 
-    },[comment]);
+    }, [comment]);
 
 
 
 
     const authInfo = {
-
+        comment,
+        addNewComments
     }
 
     return (

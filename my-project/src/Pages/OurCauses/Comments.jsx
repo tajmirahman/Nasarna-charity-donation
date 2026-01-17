@@ -1,16 +1,47 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../../Auth/AuthProvider';
 
 const Comments = () => {
 
-    const handleComments=(e)=>{
+    const { comment, addNewComments } = useContext(AuthContext);
+
+    const handleComments = (e) => {
         e.preventDefault();
-        console.log('yes comments form watch')
+        const form = e.target;
+
+        const commentsInfo = {
+            id: Date.now(),
+            name: form.name.value,
+            email: form.email.value,
+            textarea: form.textarea.value
+        }
+
+        addNewComments(commentsInfo);
+        form.reset();
+
+
+
+
+        // console.log({ name, email, textarea })
     }
 
     return (
         <div>
-            <form onSubmit={handleComments} >
 
+            <div className='mb-10'>
+                {
+                    comment?.map(singleComment => (
+                        <div>
+                            <h2>{singleComment.name}</h2>
+                            <p>{singleComment.email}</p>
+                            <p>{singleComment.textarea}</p>
+                        </div>
+                    ))
+                }
+            </div>
+
+
+            <form onSubmit={handleComments} >
                 <div className='flex gap-3 mt-5'>
                     <fieldset className="fieldset">
                         <input type="text" name='name' className="input" placeholder="full name" />
@@ -20,11 +51,8 @@ const Comments = () => {
                         <input type="email" name='email' className="input" placeholder=" email" />
                     </fieldset>
                 </div>
-                <fieldset className="fieldset">
-                    <input type="text" className="input w-[390px]" placeholder="website" />
-                </fieldset>
 
-                <textarea placeholder="write your comments" className="textarea textarea-primary w-[390px] mt-3"></textarea>
+                <textarea name='textarea' placeholder="write your comments" className="textarea textarea-primary w-[390px] mt-3"></textarea>
 
                 <div className='my-3'>
                     <button type='submit' className='btn text-white bg-[#21c8cb]'>Submit</button>
