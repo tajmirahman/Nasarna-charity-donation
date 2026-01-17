@@ -1,17 +1,23 @@
 import React from 'react';
 
 const Comments = () => {
+
+    const handleComments=(e)=>{
+        e.preventDefault();
+        console.log('yes comments form watch')
+    }
+
     return (
         <div>
-            <div className=''>
+            <form onSubmit={handleComments} >
 
                 <div className='flex gap-3 mt-5'>
                     <fieldset className="fieldset">
-                        <input type="text" className="input" placeholder="full name" />
+                        <input type="text" name='name' className="input" placeholder="full name" />
                     </fieldset>
 
                     <fieldset className="fieldset">
-                        <input type="email" className="input" placeholder=" email" />
+                        <input type="email" name='email' className="input" placeholder=" email" />
                     </fieldset>
                 </div>
                 <fieldset className="fieldset">
@@ -24,7 +30,7 @@ const Comments = () => {
                     <button type='submit' className='btn text-white bg-[#21c8cb]'>Submit</button>
                 </div>
 
-            </div>
+            </form>
         </div>
     );
 };

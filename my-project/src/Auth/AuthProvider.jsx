@@ -1,18 +1,38 @@
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const AuthContext=createContext();
+export const AuthContext = createContext();
 
-const AuthProvider = ({children}) => {
+const AuthProvider = ({ children }) => {
 
-    const name={
-        name: 'utsob',
-        email:'utsob@gmal.com'
+    const [comment, setComments] = useState([]);
+
+    // for specific new id create
+    const addNewComments = (comments) => {
+        setComments(prev => [...prev, comments]);
     }
 
+    useEffect(() => {
 
-    const authInfo={
-        name
+        const storedComments = localStorage.getItem('comments');
+
+        if(storedComments){
+            setComments(JSON.parse(storedComments));
+        }
+
+    }, [])
+
+    useEffect(()=>{
+
+        localStorage.setItem('comments', JSON.stringify(comment));
+
+    },[comment]);
+
+
+
+
+    const authInfo = {
+
     }
 
     return (
