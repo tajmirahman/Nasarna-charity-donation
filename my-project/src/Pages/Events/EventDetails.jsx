@@ -30,7 +30,11 @@ const EventDetails = () => {
 
             <div className='w-10/12 mx-auto'>
                 {
-                    events?.map(singelEvent =><EventDetailsCard key={singelEvent.id} singelEvent={singelEvent}></EventDetailsCard>)
+                    events?.map(singelEvent =><EventDetailsCard 
+                        key={singelEvent.id} 
+                        singelEvent={singelEvent}
+                        data={data}
+                        ></EventDetailsCard>)
                 }
             </div>
 
