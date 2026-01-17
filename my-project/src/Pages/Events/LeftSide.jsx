@@ -17,17 +17,8 @@ const LeftSide = ({ event }) => {
 
     // for other buttons active except navlink
     const btnClass = (name) =>
-        active === name ? "btn bg-primary text-white" : "btn";
+        active === name ? "btn bg-[#21c8cb] text-white" : "btn";
 
-    // // for location
-    // event = {
-    //     image: "...",
-    //     details: "...",
-    //     location: {
-    //         lat: 23.8103,
-    //         lng: 90.4125
-    //     }
-    // }
 
     const handleLearn = () => {
         setActive('learn');
