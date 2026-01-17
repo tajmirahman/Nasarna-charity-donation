@@ -1,8 +1,27 @@
-import { Link, Outlet } from "react-router-dom";
+import { useState } from "react";
+import { Link, } from "react-router-dom";
+import ReadMore from "./ReadMore";
+import Donation from "./Donation";
+import Comments from "./Comments";
 
 
 const CausesDetailsCard = ({ causes }) => {
-    // console.log(causes);
+    const [active, setActive]=useState('read');
+
+    const handleRead=()=>{
+        setActive('read');
+    }
+    const handleDonation=()=>{
+        setActive('donation');
+
+    }
+
+    const handleComment=()=>{
+        setActive('comment')
+    }
+
+
+
     return (
         <>
         <div className='md:flex-row'>
@@ -10,38 +29,35 @@ const CausesDetailsCard = ({ causes }) => {
                 <img className='w-full  object-contain' src={causes.image} alt="" />
             </div>
             <div className='my-5 space-x-5 md:p-3 *:border-4 '>
-                <Link to={`/causes-details/${causes.id}`} className='btn bg-[#21c8cb] rounded-3xl'>Read More</Link>
-                <Link to={'/donation'} className='btn bg-[#21c8cb] rounded-3xl'>Donation</Link>
-                <button className='btn bg-[#21c8cb] rounded-3xl'>Comments</button>
+                <button onClick={handleRead} className='btn bg-[#21c8cb] rounded-3xl'>Read More</button>
+                <button onClick={handleDonation} className='btn bg-[#21c8cb] rounded-3xl'>Donation</button>
+                <button onClick={handleComment} className='btn bg-[#21c8cb] rounded-3xl'>Comments</button>
             </div>
-
-
-            {/* <Outlet></Outlet> */}
-
 
             <div>
-                {causes.description?.map((desc, index) => (
-                    <div key={index} className=''>
-                        <h1 className='md:text-3xl font-semibold mb-5'>{desc["1stHeading"]}</h1>
-                        <div className='space-y-3 text-justify'>{desc.details?.map((p, i) => (
-                            <p key={i}>{p}</p>
-                        ))}</div>
-
-                        <div>
-                            <h2 className='md:text-3xl font-semibold my-5'>{desc["2ndHeading"]}</h2>
-                            <p className='mb-5'>{desc["2ndDetails"]}</p>
-                            <div className=''>{
-                                desc.keyPoin?.map((list, i) => (
-                                    <div className='flex items-center gap-2'>
-                                        <span className='text-4xl mt-2 text-[#21c8cb]'>*</span>
-                                        <p key={i}>{list}</p>
-                                    </div>
-                                ))
-                            }</div>
-                        </div>
-                    </div>
-                ))}
+                {
+                    active === 'read' && (
+                        <ReadMore causes={causes}></ReadMore>
+                    )
+                }
             </div>
+            <div>
+                {
+                    active === 'donation' && (
+                        <Donation></Donation>
+                    )
+                }
+            </div>
+            <div>
+                {
+                    active === 'comment' && (
+                        <Comments></Comments>
+                    )
+                }
+            </div>
+
+
+            
 
         </div>
 
