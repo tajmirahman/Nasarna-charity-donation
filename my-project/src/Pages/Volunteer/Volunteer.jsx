@@ -14,7 +14,7 @@ const Volunteer = () => {
 
 
     return (
-        <div className='w-9/12 mx-auto '>
+        <div className='md:w-10/12 mx-auto '>
             <p className='text-[#21c8cb] text-center mb-6'>Meet Our Team</p>
             <h2 className='text-3xl text-center mb-5'>Our Expert Volunteer</h2>
 

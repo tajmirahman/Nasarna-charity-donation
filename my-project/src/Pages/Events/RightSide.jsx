@@ -11,7 +11,7 @@ const RightSide = ({ event }) => {
 
     if (eventSlice.length > 3) {
         const remaining = 3 - eventSlice.length;
-        eventSlice = eventSlice.concat(event.slice(0, remaining))
+        eventSlice = eventSlice.concat(event.slice(0, remaining));
     }
 
     useEffect(() => {

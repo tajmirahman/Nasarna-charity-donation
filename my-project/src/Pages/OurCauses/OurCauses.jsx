@@ -31,7 +31,7 @@ const OurCauses = () => {
                 </div>
             </nav>
 
-            <div className='w-9/12 mx-auto'>
+            <div className='w-10/12 mx-auto'>
                 <h2 className='text-2xl md:text-4xl text-center p-2 my-10'>Popular Causes What You Should Know
                 </h2>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-3 mb-10'>

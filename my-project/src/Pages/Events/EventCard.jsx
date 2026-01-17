@@ -6,10 +6,10 @@ const EventCard = ({ event }) => {
     return (
         <div>
             <div className="card">
-                <img className='w-full mx-auto' src={event.image} alt="" />
-                <div className="card-body">
+                <img className='relative md:w-full mx-auto' src={event.image} alt="" />
+                <div className="absolute -bottom-3 right-20 md:right-5 card-body shadow-lg bg-white w-[250px]">
                     <h2 className='text-xl font-semibold'>{event.title}</h2>
-                    <p>{event.details.slice(0, 79) + "..."}</p>
+                    <p>{event.details.slice(0, 60) + "..."}</p>
                     <Link to={`/event-details/${event.id}`} className='text-[#21c8cb] font-bold'>Learn more ...</Link>
                 </div>
             </div>
