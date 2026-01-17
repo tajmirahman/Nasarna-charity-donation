@@ -5,9 +5,7 @@ import OurCauses from "../Pages/OurCauses/OurCauses";
 import CausesDetails from "../Pages/OurCauses/CausesDetails";
 import Event from "../Pages/Events/Event";
 import EventDetails from "../Pages/Events/EventDetails";
-import Donation from "../Pages/Donation/Donation";
-import EventDetailsCard from "../Pages/Events/EventDetailsCard";
-import LearnMore from "../Pages/Events/LearnMore";
+
 
 
 

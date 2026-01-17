@@ -1,8 +1,7 @@
 
 import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 import LearnMore from './LearnMore';
-import Donation from '../Donation/Donation';
 import Contact from './Contact';
 import MapLocation from './MapLocation';
 
