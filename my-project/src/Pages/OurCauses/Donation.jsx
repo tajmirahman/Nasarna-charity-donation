@@ -19,12 +19,15 @@ const Donation = () => {
             email:form.email.value,
             address:form.address.value,
             textarea:form.textarea.value,
+
         }
+
+        
 
         addNewDonation(donationInfo);
         form.reset();
 
-        navigate('/donation-details');
+        // navigate('/');
         alert('successfuly paid donation')
     }
 
@@ -34,30 +37,30 @@ const Donation = () => {
             <form onSubmit={handleDonation}>
                 <fieldset className="fieldset">
                     <legend className="fieldset-legend text-xl">Your Donation</legend>
-                    <input type="number" name="ammount" className="input w-[390px]" placeholder="Type donation amount here" />
+                    <input type="number" name="ammount" className="input w-[390px]" placeholder="Type donation amount here" required/>
                 </fieldset>
 
                 <div className='flex gap-3 mt-5'>
                     <fieldset className="fieldset">
-                        <input type="text" name="fName" className="input" placeholder="first name" />
+                        <input type="text" name="fName" className="input" placeholder="first name" required/>
                     </fieldset>
 
                     <fieldset className="fieldset">
-                        <input type="text" name="lName" className="input" placeholder=" last name" />
+                        <input type="text" name="lName" className="input" placeholder=" last name" required />
                     </fieldset>
                 </div>
 
                 <div className='flex gap-3'>
                     <fieldset className="fieldset">
-                        <input type="email" name="email" className="input" placeholder="Type your email" />
+                        <input type="email" name="email" className="input" placeholder="Type your email" required/>
                     </fieldset>
 
                     <fieldset className="fieldset">
-                        <input type="text" name="address" className="input" placeholder=" address" />
+                        <input type="text" name="address" className="input" placeholder=" address" required/>
                     </fieldset>
                 </div>
 
-                <textarea name="textarea" placeholder="Type your message" className="textarea textarea-primary w-[390px] mt-3"></textarea>
+                <textarea name="textarea" placeholder="Type your message" className="textarea textarea-primary w-[390px] mt-3" required></textarea>
 
                 <div className='mt-3'>
                     <button type='submit' className='btn text-white bg-[#21c8cb]'>Submit</button>
