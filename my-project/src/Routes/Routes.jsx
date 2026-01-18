@@ -5,6 +5,7 @@ import OurCauses from "../Pages/OurCauses/OurCauses";
 import CausesDetails from "../Pages/OurCauses/CausesDetails";
 import Event from "../Pages/Events/Event";
 import EventDetails from "../Pages/Events/EventDetails";
+import DonationDetails from "../Pages/Donation/DonationDetails";
 
 
 
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
         path:'/event-details/:id',
         element:<EventDetails></EventDetails>,
         loader: ()=> fetch ('/Events.json')    
+    },
+    {
+        path:'/donation-details',
+        element:<DonationDetails></DonationDetails>
     },
     {
         path: '/auth',

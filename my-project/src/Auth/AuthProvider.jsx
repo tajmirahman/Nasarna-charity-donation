@@ -6,7 +6,7 @@ export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
 
     const [comment, setComments] = useState([]);
-    const [loading, setLoading]=useState(false);
+    const [loading, setLoading] = useState(false);
 
     // for specific new id create
     const addNewComments = (comments) => {
@@ -26,18 +26,39 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
 
-        if(loading){
+        if (loading) {
             localStorage.setItem('comments', JSON.stringify(comment));
         }
 
     }, [comment, loading]);
+
+    const [donation, setDonation] = useState(() => {
+        try {
+            const storeDonation = localStorage.getItem('donation');
+            return storeDonation ? JSON.parse(storeDonation) : []
+        }catch{
+            return [] ;
+        }
+    })
+
+    const addNewDonation = (donation) => {
+        setDonation(prev => [...prev, donation])
+    }
+
+    useEffect(() => {
+        if (donation) {
+            return localStorage.setItem('donation', JSON.stringify(donation))
+        }
+    }, [donation])
 
 
 
 
     const authInfo = {
         comment,
-        addNewComments
+        addNewComments,
+        addNewDonation,
+        donation
     }
 
     return (
