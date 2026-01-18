@@ -22,15 +22,17 @@ const Comments = () => {
         // console.log({ name, email, textarea })
     }
 
- 
+
 
     return (
         <div>
 
             <div className='mb-10'>
+                <h2 className='text-xl font-semibold'>Comments</h2>
                 {
                     comment?.map(singleComment => (
-                        <div className='my-3 border-2'>
+                        <div className='my-3 border-2 w-3/6'>
+
                             <div className='flex justify-between p-2'>
                                 <div>
                                     <h2 className='font-semibold'>{singleComment.name}</h2>
@@ -47,6 +49,7 @@ const Comments = () => {
 
 
             <form onSubmit={handleComments} >
+                <h2 className='text-xl font-semibold'>Leave a Comment</h2>
                 <div className='flex gap-3 mt-5'>
                     <fieldset className="fieldset">
                         <input type="text" name='name' className="input" placeholder="full name" />

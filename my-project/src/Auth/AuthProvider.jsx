@@ -6,6 +6,7 @@ export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
 
     const [comment, setComments] = useState([]);
+    const [loading, setLoading]=useState(false);
 
     // for specific new id create
     const addNewComments = (comments) => {
@@ -19,14 +20,17 @@ const AuthProvider = ({ children }) => {
         if (storedComments) {
             setComments(JSON.parse(storedComments));
         }
+        setLoading(true);
 
     }, [])
 
     useEffect(() => {
 
-        localStorage.setItem('comments', JSON.stringify(comment));
+        if(loading){
+            localStorage.setItem('comments', JSON.stringify(comment));
+        }
 
-    }, [comment]);
+    }, [comment, loading]);
 
 
 
