@@ -8,7 +8,7 @@ const CausesFrontCard = ({ item }) => {
     return (
         <div>
             <div className="card shadow-md">
-                <img className='w-[300px] h-[280px] mx-auto object-contain' src={item.image} alt="" />
+                <img className='w-full h-full object-cover' src={item.image} alt="" />
 
                 <div className="card-body">
                     <h2 className='text-xl mb-10'>{item.title}</h2>
@@ -29,7 +29,7 @@ const CausesFrontCard = ({ item }) => {
                 </div>
                 <div className='flex p-2 gap-2'>
                     <Link to={`/causes-details/${item.id}`} className='btn flex-1' >Learn more</Link>
-                    <button className='btn flex-1 bg-[#21c8cb] text-white'>Donate Now</button>
+                    <Link to={'/donation-now'} className='btn flex-1 bg-[#21c8cb] text-white'>Donate Now</Link>
                 </div>
             </div>
         </div>

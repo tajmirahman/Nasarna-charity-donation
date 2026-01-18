@@ -1,12 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Auth/AuthProvider";
-import { useNavigate } from "react-router-dom";
 
 
 const Donation = () => {
 
     const {addNewDonation}=useContext(AuthContext);
-    const navigate=useNavigate();
 
     const handleDonation=(e)=>{
         e.preventDefault();
@@ -27,7 +25,6 @@ const Donation = () => {
         addNewDonation(donationInfo);
         form.reset();
 
-        // navigate('/');
         alert('successfuly paid donation')
     }
 

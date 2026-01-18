@@ -1,0 +1,76 @@
+import { useContext } from "react";
+import { AuthContext } from "../../Auth/AuthProvider";
+import Header from "../../Components/Header";
+
+
+const Donation = () => {
+
+    const { addNewDonation } = useContext(AuthContext);
+
+    const handleDonation = (e) => {
+        e.preventDefault();
+        const form = e.target;
+
+        const donationInfo = {
+            ammount: form.ammount.value,
+            fName: form.fName.value,
+            lName: form.lName.value,
+            email: form.email.value,
+            address: form.address.value,
+            textarea: form.textarea.value,
+
+        }
+
+
+
+        addNewDonation(donationInfo);
+        form.reset();
+
+        alert('successfuly paid donation')
+    }
+
+
+    return (
+        <div>
+            <Header></Header>
+            <div className='w-5/6 md:w-2/6 mx-auto my-5'>
+                <form onSubmit={handleDonation}>
+                    <fieldset className="fieldset">
+                        <legend className="fieldset-legend text-xl">Make a Donation</legend>
+                        <input type="number" name="ammount" className="input w-[390px]" placeholder="Type donation amount here" required />
+                    </fieldset>
+
+                    <div className='flex gap-3 mt-5'>
+                        <fieldset className="fieldset">
+                            <input type="text" name="fName" className="input" placeholder="first name" required />
+                        </fieldset>
+
+                        <fieldset className="fieldset">
+                            <input type="text" name="lName" className="input" placeholder=" last name" required />
+                        </fieldset>
+                    </div>
+
+                    <div className='flex gap-3'>
+                        <fieldset className="fieldset">
+                            <input type="email" name="email" className="input" placeholder="Type your email" required />
+                        </fieldset>
+
+                        <fieldset className="fieldset">
+                            <input type="text" name="address" className="input" placeholder=" address" required />
+                        </fieldset>
+                    </div>
+
+                    <textarea name="textarea" placeholder="Type your message" className="textarea textarea-primary w-[390px] mt-3" required></textarea>
+
+                    <div className='mt-3'>
+                        <button type='submit' className='btn text-white bg-[#21c8cb]'>Submit</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    );
+};
+
+export default Donation;

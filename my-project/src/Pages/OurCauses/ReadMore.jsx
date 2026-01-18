@@ -5,7 +5,7 @@ const ReadMore = ({ causes }) => {
         <div>
             {causes.description?.map((desc, index) => (
                 <div key={index} className=''>
-                    <h1 className='md:text-3xl font-semibold mb-5'>{desc["1stHeading"]}</h1>
+                    <h1 className=' mb-5'>{desc["1stHeading"]}</h1>
                     <div className='space-y-3 text-justify'>{desc.details?.map((p, i) => (
                         <p key={i}>{p}</p>
                     ))}</div>
