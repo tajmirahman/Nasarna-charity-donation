@@ -1,5 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, } from 'react';
 import { AuthContext } from '../../Auth/AuthProvider';
+import { FaReply } from 'react-icons/fa';
 
 const Comments = () => {
 
@@ -18,12 +19,10 @@ const Comments = () => {
 
         addNewComments(commentsInfo);
         form.reset();
-
-
-
-
         // console.log({ name, email, textarea })
     }
+
+ 
 
     return (
         <div>
@@ -31,10 +30,16 @@ const Comments = () => {
             <div className='mb-10'>
                 {
                     comment?.map(singleComment => (
-                        <div>
-                            <h2>{singleComment.name}</h2>
-                            <p>{singleComment.email}</p>
-                            <p>{singleComment.textarea}</p>
+                        <div className='my-3 border-2'>
+                            <div className='flex justify-between p-2'>
+                                <div>
+                                    <h2 className='font-semibold'>{singleComment.name}</h2>
+                                    <p className=''>{singleComment.email}</p>
+                                </div>
+                                <span className='text-2xl text-[#21c8cb]'><FaReply /></span>
+                            </div>
+
+                            <p className='text-sm p-2'>{singleComment.textarea}</p>
                         </div>
                     ))
                 }
