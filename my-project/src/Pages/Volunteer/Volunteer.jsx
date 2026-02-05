@@ -14,7 +14,7 @@ const Volunteer = () => {
 
 
     return (
-        <div className='md:w-10/12 mx-auto '>
+        <div className='w-10/12 mx-auto '>
             <p className='text-[#21c8cb] text-center mb-6'>Meet Our Team</p>
             <h2 className='text-3xl text-center mb-5'>Our Expert Volunteer</h2>
 
@@ -43,7 +43,7 @@ const Volunteer = () => {
 
         
                 <div className='flex justify-evenly items-center mt-20 bg-[#2cd08c] h-[200px]'>
-                    <p className='text-3xl text-white'>Lets Chenge The World <br /> With Humanity</p>
+                    <p className='md:text-3xl text-white'>Lets Chenge The World <br /> With Humanity</p>
                     <button className='btn'>Become a volunteer</button>
                 </div>
            

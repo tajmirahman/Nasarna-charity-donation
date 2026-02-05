@@ -1,6 +1,7 @@
 [
     {
         "id":1,
+        "title":"Help the helpless who need you.",
         "image":"https://i.ibb.co.com/20mWnj2K/blog-3.jpg",
         "category":["Helping Poor","Water Problem","Charity","Medical Campain", "Free Food"],
         "tags":["Donation","Help","Charity","Non Profit", "Poor People"],
@@ -13,6 +14,7 @@
     },
     {
         "id":2,
+        "title":"Help the helpless who need you.",
         "image":"https://i.ibb.co.com/DHBDzJ8K/Blog-2.jpg",
         "category":["Helping Poor","Water Problem","Charity","Medical Campain", "Free Food"],
         "tags":["Donation","Help","Charity","Non Profit", "Poor People"],
@@ -25,6 +27,7 @@
     },
     {
         "id":3,
+        "title":"Help the helpless who need you.",
         "image":"https://i.ibb.co.com/N2RdV9fh/blog-1.jpg",
         "category":["Helping Poor","Water Problem","Charity","Medical Campain", "Free Food"],
         "tags":["Donation","Help","Charity","Non Profit", "Poor People"],
