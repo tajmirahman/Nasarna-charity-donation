@@ -7,6 +7,7 @@ import Volunteer from '../Pages/Volunteer/Volunteer';
 import Footer from '../Components/Footer';
 import Event from '../Pages/Events/Event';
 import EventSection from '../Pages/Events/EventSection';
+import BlogSection from '../Pages/Blog/BlogSection';
 
 
 
@@ -32,7 +33,7 @@ const MainLayout = () => {
             </section>
 
             <section>
-                
+                <BlogSection></BlogSection>
             </section>
 
             

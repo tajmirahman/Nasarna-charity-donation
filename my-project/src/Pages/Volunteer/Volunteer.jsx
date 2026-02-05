@@ -40,6 +40,13 @@ const Volunteer = () => {
                     ))
                 }
             </div>
+
+        
+                <div className='flex justify-evenly items-center mt-20 bg-[#2cd08c] h-[200px]'>
+                    <p className='text-3xl text-white'>Lets Chenge The World <br /> With Humanity</p>
+                    <button className='btn'>Become a volunteer</button>
+                </div>
+           
         </div>
     );
 };
