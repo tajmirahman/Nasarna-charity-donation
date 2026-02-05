@@ -7,6 +7,7 @@ import Event from "../Pages/Events/Event";
 import EventDetails from "../Pages/Events/EventDetails";
 import DonationDetails from "../Pages/Donation/DonationDetails";
 import DonationNow from "../Pages/Donation/DonationNow";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 
@@ -48,11 +49,13 @@ const router = createBrowserRouter([
     },
     {
         path: '/donation-details',
-        element: <DonationDetails></DonationDetails>
+        element:
+            <DonationDetails></DonationDetails>
+      
     },
     {
         path: '/donation-now',
-        element:<DonationNow></DonationNow>
+        element: <DonationNow></DonationNow>
     },
     {
         path: '/auth',
